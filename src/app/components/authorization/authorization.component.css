@@ -1,0 +1,17 @@
+.auth {
+  max-width: 500px;
+  margin: 50px auto;
+}
+.auth__title {
+  text-align: center;
+  padding: 0.7em;
+}
+.auth__filed {
+  display: block;
+}
+.auth__submit-block {
+  margin-top: 0.6em;
+}
+.auth__error {
+  color: #ff584d;
+}
