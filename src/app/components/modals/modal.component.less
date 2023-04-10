@@ -1,0 +1,67 @@
+.modal{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    &__label{
+        text-align: center;
+        font-weight: bold;
+    }
+    &__form{
+        position: relative;
+        padding: 1em 2em;
+        background-color: white;
+        border-radius: 0.5em;
+        width: 400px;
+        margin: 5em auto;
+    }
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        padding: 0.3em;
+        border-radius: 0.4em;
+        border: 1px #ddd solid;
+        font-size: 1.2rem;
+    }
+    &__close:hover{
+        cursor: pointer;
+    }
+    &__field{
+        margin-top: 0.7em;
+        .invalid{
+            border: 1px #EE5353 solid;
+        }
+        input{
+            outline: none;
+            padding: 0.5em;
+            width: 100%;
+            border-radius: 0.4em;
+            border: 1px #ddd solid;
+        }
+        input:focus{
+            border: 2px #ccc solid;
+        }
+        label{
+            display: block;
+        }
+    }
+    &__field_button{
+        margin-top: 0.7em;
+        display: flex;
+        justify-content: center;
+    }
+    &__error{
+        margin: 12px 0;
+        p{
+            text-align: center;
+            padding: 0.5em;
+            color: white;
+            background-color: #EE5353;
+        }
+    }
+}

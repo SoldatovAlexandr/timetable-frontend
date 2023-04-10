@@ -17,6 +17,12 @@ import {MatFormFieldModule} from "@angular/material/form-field"
 import {MatInputModule} from "@angular/material/input"
 import AuthorizationComponent from './components/authorization/authorization.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import AdminComponent from './components/admin/admin.component';
+import CreateAdminModalComponent from './components/modals/create-admin-modal/create-admin-modal.component';
+import CreateTeacherModalComponent from './components/modals/create-teacher-modal/create-teacher-modal.component';
+import CreateUserModalComponent from './components/modals/create-user-modal/create-user-modal.component';
+import CreateGroupModalComponent from './components/modals/create-group-modal/create-group-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +30,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     UserComponent,
     HeaderComponent,
-    AuthorizationComponent
+    AdminComponent,
+    CreateAdminModalComponent,
+    CreateTeacherModalComponent,
+    CreateGroupModalComponent,
+    CreateUserModalComponent,
+    AuthorizationComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     StoreModule.forRoot(reducers),
     HttpClientModule,
     ReactiveFormsModule,

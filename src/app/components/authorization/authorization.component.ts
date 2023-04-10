@@ -44,7 +44,6 @@ export default class AuthorizationComponent implements OnDestroy{
                 this.authorizationService.auth(this.form.getRawValue())
                 .pipe(takeUntil(this.ngUnsubscribe))
                 .subscribe({ next: (info) => {
-                    console.log(info)
                     appEmmiter.authEmitter.emit(false);
                     this.error = null;
                     this.changeDetectorRef.markForCheck();

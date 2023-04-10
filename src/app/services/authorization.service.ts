@@ -14,7 +14,7 @@ export class AuthorizationService{
     }
 
     user(): Observable<unknown>{
-        return this.httpClient.get("/api/user");
+        return this.httpClient.get(("/api/user"),  { withCredentials: true });
     }
 
     logout(): void{

@@ -1,0 +1,16 @@
+<div class="modal">
+    <form novalidate [formGroup]="formModel" class="modal__form" (ngSubmit)="onSubmit()">
+        <span routerLink="../" class="modal__close">✕</span>
+        <h1 class="modal__label">Группа</h1>
+        <div class="modal__field">
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['group'].status === 'INVALID'}"
+                formControlName="group" type="text" placeholder="Введите название группы..."/>
+        </div>
+        <div *ngIf="errorText" class="modal__error">
+            <p>{{errorText}}</p>
+        </div>
+        <div class="modal__field_button">
+            <button type="submit" mat-raised-button color="primary">Добавить</button>
+        </div>
+    </form>
+</div>

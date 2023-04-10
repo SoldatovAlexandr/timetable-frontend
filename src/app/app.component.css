@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/arimo/v27/P5sfzZCDf9_T_3cV7NCUECyoxNk3CstsBw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvTtw.ttf) format('truetype');
+}

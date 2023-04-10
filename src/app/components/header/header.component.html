@@ -1,4 +1,4 @@
 <mat-toolbar class="toolbar">
-    <a routerLink="/" mat-button class="toolbar__main-link">Расписание</a>
-    <a routerLink="/authorization" mat-raised-button class="toolbar__right-el">Войти</a>
+    <a mat-button class="toolbar__main-link">Расписание</a>
+    <a (click)="logout()" *ngIf="!login" mat-raised-button class="toolbar__right-el">Выйти</a>
 </mat-toolbar>

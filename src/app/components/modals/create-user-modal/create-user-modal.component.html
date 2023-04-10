@@ -1,0 +1,37 @@
+<div class="modal">
+    <form novalidate [formGroup]="formModel" class="modal__form" (ngSubmit)="onSubmit()">
+        <span routerLink="../" class="modal__close">✕</span>
+        <h1 class="modal__label">Студент</h1>
+        <div class="modal__field">
+            <label for="name">Имя</label>
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['name'].status === 'INVALID'}"
+                formControlName="name" id="name" type="text" placeholder="Введите имя..."/>
+        </div>
+        <div class="modal__field">
+            <label for="sName">Фамилия</label>
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['sName'].status === 'INVALID'}"
+                formControlName="sName" id="sName" type="text" placeholder="Введите фамилию..."/>
+        </div>
+        <div class="modal__field">
+            <label for="group">Группа</label>
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['group'].status === 'INVALID'}"
+                formControlName="group" id="group" type="text" placeholder="Введите группу..."/>
+        </div>
+        <div class="modal__field">
+            <label for="login">Логин</label>
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['login'].status === 'INVALID'}" 
+                formControlName="login" id="login" type="login" placeholder="Введите логин..."/>
+        </div>
+        <div class="modal__field">
+            <label for="password">Пароль</label>
+            <input [ngClass]="{'invalid': isInvalid && formModel.controls['password'].status === 'INVALID'}"
+                formControlName="password" id="password" type="password" placeholder="Введите пароль..."/>
+        </div>
+        <div *ngIf="errorText" class="modal__error">
+            <p>{{errorText}}</p>
+        </div>
+        <div class="modal__field_button">
+            <button type="submit" mat-raised-button color="primary">Добавить</button>
+        </div>
+    </form>
+</div>
